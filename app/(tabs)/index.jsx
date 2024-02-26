@@ -9,6 +9,7 @@ import { Image, Text, View } from "react-native";
 import ImageSlider from "../../components/ImageSlider"
 import { TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
+import programCreate from '../programCreate';
 
 export default function HomeTab() {
 
@@ -61,9 +62,9 @@ className="rounded-full"
         </Text>
       </View>
       <View >
-        <TouchableOpacity className="flex-row "  onPress={() => router.push("settings")}>
+        <TouchableOpacity className="flex-row "  onPress={() => router.push("programCreate")}>
         <Image
-          source={require("../../assets/images/welcome.jpg")}
+          source={require("../../assets/images/slide2.jpg")}
           style={{ height: hp(12), width: hp(12) }}
           className="rounded-xl mx-5"
         ></Image>
