@@ -21,62 +21,21 @@ export default function programCreate() {
     }}>
      <StatusBar style="dark"/>
         {/* Punch line + avatar */}
-<View className="flex-row justify-between items-center mx-5 my-0">
-  <View className="space-y-2">
-    
-  <Image
-source={require("../assets/images/profile.png")}
-style={{height: hp(15), width: hp(15)}}
-className="rounded-full"
->
-</Image>
-
-<Text style={{fontSize: hp(3)}}className="font-bold tracking-wider text-gray-950 ">
-  Welcome back, <Text className="text-red-600">Simão</Text>
-</Text>
-<Text
-            style={{ fontSize: hp(1.8) }}
-            className="font-bold tracking-wider text-neutral-400 my-3"
-          >
-            Its a great day to get moving!
-          </Text>
-  </View>
+<View className="flex-1 flex justify-end my-8">
+  
+<TouchableOpacity
+          onPress={()=> router.push('programCreate')}
+          style={{ height: hp(5.5), width: wp(80) }}
+            className=" bg-red-600 flex items-center justify-center mx-auto rounded-xl ">
+            <Text style={{ fontSize: hp(1.7) }} className="text-white font-bold tracking-widest">
+              Create Program
+            </Text>
+          </TouchableOpacity>
 
 </View>
-{/* Programs showcase */}
-<View >
-        <Text
-          style={{ fontSize: hp(2.6) }}
-          className="mx-5  my-3 font-bold tracking-wider text-gray-950 font-example"
-        >
-          Your Programs
-        </Text>
+
     
-     
-      
-       
-      </View>
-      {/* Todays workout */}
-      <View>
-        <Text style={{ fontSize: hp(2.6) }} className="mx-5 my-1 font-bold">
-          Todays Workout
-        </Text>
-      </View>
-      <View >
-        <TouchableOpacity className="flex-row "  onPress={() => router.push("programCreate")}>
-        <Image
-          source={require("../assets/images/slide2.jpg")}
-          style={{ height: hp(12), width: hp(12) }}
-          className="rounded-xl mx-5"
-        ></Image>
-        <View>
-          <Text style={{ fontSize: hp(1.9) }} className="font-bold my-1 text-gray-950">
-            Program: Push/Pull/Legs
-          </Text>
-          <Text className="font-bold text-neutral-400">Pull Day </Text>
-        </View>
-        </TouchableOpacity>
-      </View>
+
     </SafeAreaView>
   
   );
